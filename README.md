@@ -73,7 +73,3 @@ index.html           Vite HTML entry point
 - Update qualifications and certifications in their respective files under `src/components/`.
 - Replace the resume at `public/resume.pdf` to update the downloadable PDF.
 - The contact form uses EmailJS; check `src/components/Contact.jsx` when changing its integration.
-
-## Deployment
-
-Build the site with `npm run build` and publish the generated `dist/` directory to a static hosting provider that supports Vite builds.
