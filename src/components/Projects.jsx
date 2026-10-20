@@ -5,144 +5,151 @@ import { useState } from "react";
 const projectsData = [
   {
     id: 1,
-    title: "AGGE.IN",
-    description: "Dynamic membership-based web application with admin-controlled content and complete membership management system.",
-    detailedDescription: "AGGE.IN is a fully dynamic membership-based web application designed for membership management companies. It features admin-controlled content and image management, comprehensive membership plans, secure user authentication, and role-based access control. The platform includes Admin and User Dashboards with complete CRUD operations and CMS-like functionality to manage website content without code changes.",
-    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-    image: "/project1.jpg",
-    liveLink: "https://agge.in/",
-    githubLink: "#",
+    title: "MyTodoApp",
+    description: "Offline-first mobile To-Do application built with React Native, Expo, and SQLite featuring local on-device persistence, productivity analytics, and calendar scheduling.",
+    detailedDescription: "MyTodoApp is an offline-first mobile productivity application engineered with React Native, Expo, and TypeScript. Designed for fast, privacy-focused task management without internet dependency, all tasks, categories, and completion history are stored securely on-device with SQLite. Key features include an interactive productivity dashboard with 7-day activity metrics, priority and due-date tracking, dynamic category filtering (Work, Personal, Study, Health), full-text search, and an interactive monthly and weekly calendar scheduling view.",
+    technologies: ["React Native", "Expo", "TypeScript", "SQLite", "Mobile UI"],
+    image: "/screenshots/mytodoapp_1.jpg",
+    liveLink: null,
+    githubLink: "https://github.com/Beniting",
     featured: true,
     screenshots: [
-      "/screenshots/agge1.jpg",
-      "/screenshots/agge2.jpg",
-      "/screenshots/agge3.jpg",
+      "/screenshots/mytodoapp_1.jpg",
+      "/screenshots/mytodoapp_2.jpg",
+      "/screenshots/mytodoapp_3.jpg"
     ],
     keyFeatures: [
-      "Flexible membership plans with multiple tiers",
-      "User authentication and authorization",
-      "Admin Dashboard for content management",
-      "User Dashboard with membership details",
-      "Complete CRUD operations",
-      "Image and content management system",
-      "Role-based access control",
-      "Responsive design for all devices"
+      "Offline-first architecture with high-performance local SQLite storage",
+      "Productivity dashboard with pending, overdue, and completion rate metrics",
+      "7-day activity tracking bar chart visualizing task completion trends",
+      "Dynamic task categorization (Work, Personal, Study, Health) with priority flags",
+      "Interactive Calendar view with Month View and Week Strip modes",
+      "Fast on-device search and filtering across task titles, notes, and categories",
+      "Modern native mobile interface with intuitive bottom navigation"
     ],
-    challenges: "Building a dynamic system that allows admin to manage content without technical knowledge",
-    solution: "Implemented an intuitive admin panel with CMS-like functionality for content management"
+    challenges: "Architecting a dependable offline-first data model capable of fast querying, filtering by category and date, and instant updates without cloud or server reliance.",
+    solution: "Implemented an optimized SQLite database schema with indexed lookups, paired with clean TypeScript interfaces and responsive state management for a smooth 60fps mobile experience."
   },
   {
     id: 2,
-    title: "ThinkSynapseCare",
-    description: "Healthcare appointment booking system with dashboards for Admin, Doctors, and Patients with secure backend logic.",
-    detailedDescription: "ThinkSynapseCare is a comprehensive healthcare appointment booking system designed for seamless patient-doctor interactions. The system features specialized dashboards for Admin, Doctors, and Patients, appointment scheduling with real-time availability, patient records management, and secure booking management. It includes robust backend logic with session handling and complete CRUD operations for all entities.",
-    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-    image: "/project2.jpg",
-    liveLink: "https://thinksynapsecare.org/",
-    githubLink: "#",
+    title: "AGGE",
+    description: "Dynamic membership-based web platform for the Association of Geosciences & Geo Engineering built with Java Spring Boot and dynamic admin CMS.",
+    detailedDescription: "AGGE (Association of Geosciences & Geo Engineering) is a dynamic, full-featured web platform engineered using Java Spring Boot. It provides a complete membership lifecycle management system, secure user authentication, event and conference registration, notification broadcasts, and research publication access. The platform features an intuitive Admin Dashboard with CMS capability enabling non-technical administrators to manage content, images, and announcements without code redeployment.",
+    technologies: ["Java", "Spring Boot", "MySQL", "Thymeleaf", "HTML5", "CSS3", "JavaScript", "REST APIs"],
+    image: "/screenshots/agge.png",
+    liveLink: "https://agge.in/",
+    githubLink: null,
     featured: true,
     screenshots: [
-      "/screenshots/thinksynapsecare1.jpg",
-      "/screenshots/thinksynapsecare2.jpg",
-      "/screenshots/thinksynapsecare3.jpg",
+      "/screenshots/agge.png"
     ],
     keyFeatures: [
-      "Admin Dashboard for system management",
-      "Doctor Dashboard for appointment management",
-      "Patient Dashboard with appointment history",
-      "Real-time appointment scheduling",
-      "Patient records management",
-      "Doctor availability management",
-      "Secure session handling",
-      "Booking confirmation and notifications"
+      "Java Spring Boot enterprise backend with clean MVC architecture",
+      "Dynamic tiered membership management and registration system",
+      "Admin CMS dashboard for real-time content and image updates",
+      "Event and conference registration system with alert notifications",
+      "Member portal with personalized dashboard and profile management",
+      "Role-based access control (RBAC) and secure session authentication",
+      "Responsive, modern user interface across desktop and mobile devices"
     ],
-    challenges: "Managing appointment conflicts and ensuring real-time availability updates across multiple doctors",
-    solution: "Implemented transaction-based booking system with proper locking mechanisms"
+    challenges: "Building a scalable, high-performance portal in Spring Boot that allows administrators to update announcements and manage member applications seamlessly with zero downtime.",
+    solution: "Engineered a Spring Boot architecture with Spring Data JPA, RESTful services, secure Spring Security authentication, and a modular admin panel for effortless content management."
   },
   {
     id: 3,
-    title: "TeamWeb",
-    description: "Responsive company portfolio website with contact form and backend validation for client inquiries.",
-    detailedDescription: "TeamWeb is a professional company portfolio website designed to showcase services and attract clients. It features a responsive design that works seamlessly across all devices, a fully functional contact form with backend processing and validation, and a clean, modern UI that represents the company professionally.",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
-    image: "/project3.jpg",
-    liveLink: "https://teamweb.in/",
-    githubLink: "#",
-    featured: false,
+    title: "Telecare Health",
+    description: "24/7 physician-led medical support & telehealth services platform with dynamic PHP admin CMS for real-time content updates.",
+    detailedDescription: "Telecare Health is an Australian-based healthcare platform providing 24/7 physician-led virtual medical support, telemedicine consultations, and emergency triage for aviation, maritime, remote industrial sites, and global workforces. Built with a dynamic PHP backend, it features a comprehensive Admin CMS dashboard allowing authorized personnel to update clinical services, medical guidelines, announcements, and team information in real-time.",
+    technologies: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Admin CMS", "RESTful APIs"],
+    image: "/screenshots/telecarehealth.png",
+    liveLink: "https://telecarehealth.com.au/",
+    githubLink: null,
+    featured: true,
     screenshots: [
-      "/screenshots/teamweb1.jpg",
-      "/screenshots/teamweb2.jpg",
-      "/screenshots/teamweb3.jpg",
+      "/screenshots/telecarehealth.png",
+      "/screenshots/telecarehealth_2.png"
     ],
     keyFeatures: [
-      "Responsive design for mobile and desktop",
-      "Service showcase sections",
-      "Contact form with backend processing",
-      "Form validation and error handling",
-      "Professional portfolio layout",
-      "Social media integration",
-      "Clean and modern UI",
-      "SEO-friendly structure"
+      "Dynamic Admin Panel with CMS functionality for content and service updates",
+      "24/7 physician-led emergency medical support & telemedicine consultations",
+      "Specialized industry portals for Aviation, Maritime, and Remote Workforces",
+      "Real-time biometric monitoring coordination and medical kit logistics",
+      "Secure patient consultation inquiry handling and triage dispatch",
+      "High-reliability responsive interface engineered for mission-critical care"
     ],
-    challenges: "Creating an engaging portfolio while maintaining fast load times",
-    solution: "Optimized images and implemented efficient backend processing"
+    challenges: "Developing an enterprise-grade medical portal that communicates clinical trust and gives administrators full control over dynamic services and content.",
+    solution: "Designed a secure PHP admin CMS with database-driven content modules, role authentication, and a clean, accessible healthcare interface."
   },
   {
     id: 4,
-    title: "AviationMedicals.au",
-    description: "Responsive portfolio website for aviation medicals service provider with contact form and client-side validation.",
-    detailedDescription: "AviationMedicals.au is a specialized portfolio website for aviation medical examination services. It features a responsive, modern design that adapts to all screen sizes, a professional contact form with robust client-side validation, and clear information about aviation medical services.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/project4.jpg",
-    liveLink: "https://aviationmedicals.au/",
-    githubLink: "#",
+    title: "TeamWeb",
+    description: "Responsive digital solutions & web development agency platform featuring service showcase, client inquiry processing, and interactive UI.",
+    detailedDescription: "TeamWeb is a modern digital agency website designed to showcase web and application development services, e-commerce solutions, and billing software. Built with responsive design principles, smooth CSS animations, and a secure PHP backend for lead generation, quotation inquiries, and customer outreach.",
+    technologies: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+    image: "/screenshots/teamweb.png",
+    liveLink: "https://teamweb.in/",
+    githubLink: null,
     featured: false,
     screenshots: [
-      "/screenshots/aviationmedicals1.jpg",
-      "/screenshots/aviationmedicals2.jpg",
-      "/screenshots/aviationmedicals3.jpg",
+      "/screenshots/teamweb.png"
     ],
     keyFeatures: [
-      "Responsive portfolio design",
-      "Service information sections",
-      "Contact form with validation",
-      "Professional medical branding",
-      "Mobile-optimized layout",
-      "Clear call-to-action buttons",
-      "Client testimonials section",
-      "Appointment information display"
+      "Full digital service showcase (Web Apps, E-commerce, Billing Software)",
+      "Interactive inquiry and quotation request workflows with backend processing",
+      "Modern multi-device responsive design with smooth transition animations",
+      "Client testimonials, case studies, and service portfolio showcase",
+      "SEO-friendly semantic structure and optimized page speed"
     ],
-    challenges: "Presenting medical information while maintaining professional appearance",
-    solution: "Used clean typography and professional color schemes"
+    challenges: "Designing an engaging, high-conversion agency portfolio that communicates technical capabilities clearly while maintaining fast load times.",
+    solution: "Implemented lightweight CSS animations, optimized high-definition graphics, and created a secure PHP form processing pipeline for instant inquiries."
   },
   {
     id: 5,
-    title: "IMVijayan.in",
-    description: "Personal portfolio website showcasing projects and skills with responsive UI and smooth navigation.",
-    detailedDescription: "IMVijayan.in is a personal portfolio website designed to showcase projects, skills, and professional experience. It features a responsive user interface that works perfectly on all devices and smooth navigation that enhances user experience. The site effectively presents a professional profile with project highlights and technical skills.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/project5.jpg",
-    liveLink: "https://imvijayan.in/",
-    githubLink: "#",
+    title: "Aviation Medicals",
+    description: "Certified Australian aviation medical examination platform for pilots, aircrew, and aviation personnel under CASA guidelines.",
+    detailedDescription: "Aviation Medicals (aviationmedicals.au) is a dedicated Australian healthcare platform offering certified aviation medical examinations for pilots, aircrew, and air traffic controllers under CASA regulations. Featuring an aerodynamic modern design, detailed guidance on medical certification classes, and an appointment booking flow.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "Bootstrap"],
+    image: "/screenshots/aviationmedicals.png",
+    liveLink: "https://aviationmedicals.au/",
+    githubLink: null,
     featured: false,
     screenshots: [
-      "/screenshots/imvijayan1.jpg",
-      "/screenshots/imvijayan2.jpg",
-      "/screenshots/imvijayan3.jpg",
+      "/screenshots/aviationmedicals.png"
     ],
     keyFeatures: [
-      "Responsive portfolio layout",
-      "Project showcase section",
-      "Skills and expertise display",
-      "Professional experience timeline",
-      "Smooth navigation and animations",
-      "Mobile-friendly design",
-      "Contact and social links",
-      "About section with bio"
+      "CASA aviation medical class guidance (Class 1, 2, 3 & Basic)",
+      "Appointment consultation enquiry system for pilots and aviation professionals",
+      "Clinic locations, examiner credentials, and flight fitness criteria display",
+      "Mobile-optimized, clean aerodynamic branding",
+      "Robust client-side validation and secure PHP backend handling"
     ],
-    challenges: "Creating an engaging portfolio that stands out and effectively showcases skills",
-    solution: "Implemented smooth animations and clean, modern design principles"
+    challenges: "Presenting rigorous regulatory aviation medical requirements in an accessible, reassuring, and professional manner.",
+    solution: "Created a structured information architecture with clear medical class categorization and direct appointment access."
   },
+  {
+    id: 6,
+    title: "I M Vijayan",
+    description: "Official tribute and portfolio website celebrating legendary Indian football icon I M Vijayan (Padma Shri 2025, Arjuna Awardee).",
+    detailedDescription: "IMVijayan.in is the official portfolio and tribute website honoring legendary Indian football captain and icon I M Vijayan. Highlighting his historic career, Padma Shri 2025 honor, Arjuna Award, international record sub-12-second goal, interactive photo and video galleries, and direct fan/media contact portal.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "Interactive Gallery"],
+    image: "/screenshots/imvijayan.png",
+    liveLink: "https://imvijayan.in/",
+    githubLink: null,
+    featured: false,
+    screenshots: [
+      "/screenshots/imvijayan.png",
+      "/screenshots/imvijayan_2.png"
+    ],
+    keyFeatures: [
+      "Career timeline and prestigious honors showcase (Padma Shri 2025, Arjuna Award)",
+      "Interactive video gallery highlighting legendary international goals",
+      "Historic records display including the famous sub-12-second international goal",
+      "Direct fan and media inquiry portal with PHP email integration",
+      "Responsive visual slider and mobile-optimized sports portfolio layout"
+    ],
+    challenges: "Honoring an iconic sports legend's heritage with dynamic storytelling while ensuring modern performance and accessibility across all devices.",
+    solution: "Engineered bold visual storytelling with responsive media carousels and clean, lightweight backend inquiry processing."
+  }
 ];
 
 export default function Projects() {
@@ -220,13 +227,22 @@ export default function Projects() {
               >
                 <motion.div
                   className="project-image-wrapper"
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="project-image-placeholder">
-                    <span className="display-6">💻</span>
-                    <p className="mt-2">{project.title}</p>
-                  </div>
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="project-image"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="project-image-placeholder">
+                      <span className="display-6">💻</span>
+                      <p className="mt-2">{project.title}</p>
+                    </div>
+                  )}
                   {project.featured && (
                     <motion.div 
                       className="featured-badge"
@@ -239,7 +255,7 @@ export default function Projects() {
 
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title mb-2">{project.title}</h5>
-                  <p className="card-text flex-grow-1 text-muted small">
+                  <p className="card-text flex-grow-1">
                     {project.description}
                   </p>
 
@@ -257,24 +273,32 @@ export default function Projects() {
                   </div>
 
                   <div className="d-flex gap-2">
-                    <motion.a
-                      href={project.liveLink}
-                      className="btn btn-primary btn-sm flex-grow-1 d-flex align-items-center justify-content-center gap-2"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <FaExternalLinkAlt size={12} /> Live
-                    </motion.a>
-                    <motion.a
-                      href={project.githubLink}
-                      className="btn btn-outline-primary btn-sm flex-grow-1 d-flex align-items-center justify-content-center gap-2"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <FaGithub size={12} /> Code
-                    </motion.a>
+                    {project.liveLink && (
+                      <motion.a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`btn btn-primary btn-sm ${project.githubLink ? 'flex-grow-1' : 'w-100'} d-flex align-items-center justify-content-center gap-2`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <FaExternalLinkAlt size={12} /> Live Preview
+                      </motion.a>
+                    )}
+                    {project.githubLink && (
+                      <motion.a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`btn btn-outline-primary btn-sm ${project.liveLink ? 'flex-grow-1' : 'w-100'} d-flex align-items-center justify-content-center gap-2`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <FaGithub size={12} /> Code
+                      </motion.a>
+                    )}
                   </div>
 
                   <motion.button
@@ -334,9 +358,19 @@ export default function Projects() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                     >
-                      <div className="screenshot-placeholder">
-                        <span className="display-1">📸</span>
-                        <p>Screenshot {currentImageIndex + 1} of {selectedProject.screenshots.length}</p>
+                      <div className="screenshot-container">
+                        {selectedProject.screenshots && selectedProject.screenshots[currentImageIndex] ? (
+                          <img
+                            src={selectedProject.screenshots[currentImageIndex]}
+                            alt={`${selectedProject.title} screenshot ${currentImageIndex + 1}`}
+                            className="screenshot-img"
+                          />
+                        ) : (
+                          <div className="screenshot-placeholder">
+                            <span className="display-1">📸</span>
+                            <p>Screenshot {currentImageIndex + 1} of {selectedProject.screenshots ? selectedProject.screenshots.length : 1}</p>
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   </AnimatePresence>
@@ -428,22 +462,30 @@ export default function Projects() {
                 </div>
 
                 <div className="modal-actions">
-                  <motion.a
-                    href={selectedProject.liveLink}
-                    className="btn btn-primary btn-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaExternalLinkAlt /> View Live
-                  </motion.a>
-                  <motion.a
-                    href={selectedProject.githubLink}
-                    className="btn btn-outline-primary btn-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaGithub /> View Code
-                  </motion.a>
+                  {selectedProject.liveLink && (
+                    <motion.a
+                      href={selectedProject.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-lg"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaExternalLinkAlt /> View Live Site
+                    </motion.a>
+                  )}
+                  {selectedProject.githubLink && (
+                    <motion.a
+                      href={selectedProject.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline-primary btn-lg"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaGithub /> View Code
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
