@@ -4,7 +4,7 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
       <div className="container-fluid px-4">
         <a className="navbar-brand fw-bold brand-text" href="#">
           <span className="brand-icon">{'<'}</span>
-          MyPortfolio
+          Beniting
           <span className="brand-icon">{'/>'}</span>
         </a>
 
