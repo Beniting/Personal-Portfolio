@@ -44,7 +44,7 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
             <li className="nav-item"><a className="nav-link nav-link-custom" href="#about">About</a></li>
             <li className="nav-item"><a className="nav-link nav-link-custom" href="#projects">Projects</a></li>
             <li className="nav-item"><a className="nav-link nav-link-custom" href="#qualifications">Qualifications</a></li>
-            <li className="nav-item"><a className="nav-link nav-link-custom" href="#certifications">Certifications</a></li>
+            {/* <li className="nav-item"><a className="nav-link nav-link-custom" href="#certifications">Certifications</a></li> */}
             <li className="nav-item"><a className="nav-link nav-link-custom" href="#contact">Contact</a></li>
           </ul>
         </div>

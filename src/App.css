@@ -418,6 +418,56 @@ h1, h2 {
   padding: 0.75rem 2rem;
 }
 
+/* Hero Social & Contact Icons */
+.hero-social-links {
+  margin-top: 0.5rem;
+}
+
+.hero-social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.hero-social-icon:hover {
+  transform: translateY(-4px) scale(1.1);
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.45);
+}
+
+.hero-social-icon:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
+.light-theme .hero-social-icon {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+  color: #0284c7;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.12);
+}
+
+.light-theme .hero-social-icon:hover {
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  border-color: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.35);
+}
+
 /* ===== SECTION TITLE ===== */
 .section-title {
   font-size: 2.5rem;
@@ -1272,6 +1322,7 @@ h1, h2 {
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
+  scroll-margin-top: 100px;
 }
 
 .light-theme .qualification-accordion-item {

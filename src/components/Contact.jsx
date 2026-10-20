@@ -184,8 +184,8 @@ export default function Contact() {
                             <FaLinkedin size={30} className="mb-3 text-primary" />
                         </motion.div>
                         <h6>LinkedIn</h6>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                            Connect with me
+                        <a href="https://www.linkedin.com/in/beniting" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                            linkedin.com/in/beniting
                         </a>
                     </motion.div>
 
@@ -201,8 +201,8 @@ export default function Contact() {
                             <FaGithub size={30} className="mb-3 text-primary" />
                         </motion.div>
                         <h6>GitHub</h6>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                            View my repos
+                        <a href="https://github.com/Beniting" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                            github.com/Beniting
                         </a>
                     </motion.div>
                 </motion.div>

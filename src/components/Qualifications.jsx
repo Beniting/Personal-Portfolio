@@ -6,75 +6,70 @@ const qualifications = [
   {
     id: 1,
     level: "Postgraduate (PG)",
-    type: "Master of Technology",
-    field: "Computer Science (Optional - Add if applicable)",
-    institution: "Pursuing / Planned",
-    location: "City, State",
-    duration: "2024 - 2026 (Planned)",
-    status: "In Progress",
-    description: "Advanced specialization in emerging technologies including AI/ML, cloud architecture, and distributed systems. Focus on industry-relevant projects and research.",
+    type: "Master of Business Administration (MBA)",
+    field: "Artificial Intelligence (AI)",
+    institution: "Amrita University",
+    location: "Tamil Nadu, India",
+    duration: "2025 - 2027",
+    status: "Pursuing",
+    description: "Pursuing MBA in Artificial Intelligence, focusing on modern AI technologies, business analytics, machine learning applications, and strategic technology management.",
     courses: [
       "Artificial Intelligence & Machine Learning",
-      "Cloud Architecture & DevOps",
-      "Advanced Database Systems",
-      "Cybersecurity",
-      "Microservices Architecture",
-      "Advanced Algorithms"
+      "Business Analytics & Data Intelligence",
+      "Deep Learning & Predictive Modeling",
+      "Strategic Management in AI",
+      "Big Data Analytics",
+      "Enterprise AI Solutions"
     ],
     achievements: [
-      "Research Paper Publications",
-      "Industry Internship",
-      "Capstone Project"
+      "Specialization in Artificial Intelligence & Management",
+      "Hands-on work with AI-driven business solutions and predictive models"
     ]
   },
   {
     id: 2,
     level: "Undergraduate (UG)",
-    type: "Bachelor of Technology",
-    field: "Computer Science & Engineering",
-    institution: "ABC University",
-    location: "City, State",
-    duration: "2019 - 2023",
-    cgpa: "8.2/10",
-    description: "Comprehensive program covering full-stack web development, data structures, algorithms, and database management systems. Completed advanced coursework in software engineering and cloud computing.",
+    type: "Bachelor of Engineering (B.E.)",
+    field: "Computer Science & Engineering (CSE)",
+    institution: "St. Xavier's Catholic College of Engineering",
+    location: "Affiliated to Anna University, Tamil Nadu",
+    duration: "2020 - 2024",
+    cgpa: "7.89 CGPA",
+    description: "Completed Bachelor of Engineering in Computer Science and Engineering with a strong foundation in core computer science, software engineering, algorithms, and full-stack web development.",
     courses: [
       "Data Structures & Algorithms",
-      "Database Management Systems",
-      "Web Development",
-      "Object-Oriented Programming",
-      "Software Engineering",
-      "Cloud Computing"
+      "Database Management Systems (DBMS)",
+      "Object-Oriented Programming (Java)",
+      "Full Stack Web Development",
+      "Operating Systems & Computer Networks",
+      "Software Engineering & Agile Practices"
     ],
     achievements: [
-      "Dean's List for 3 consecutive semesters",
-      "Best Project Award 2023",
-      "Active Member of Developer's Club"
-    ]
-  },
-  {
-    id: 3,
-    level: "Schooling",
-    type: "Senior Secondary (12th)",
-    institution: "XYZ School of Excellence",
-    location: "City, State",
-    duration: "2017 - 2019",
-    percentage: "92%",
-    description: "Completed senior secondary education with focus on Science and Mathematics. Strong foundation in physics, chemistry, and mathematics.",
-    grades: [
-      "Physics: 95/100",
-      "Chemistry: 90/100",
-      "Mathematics: 94/100"
-    ],
-    achievements: [
-      "State Level Science Olympiad Rank 3",
-      "200+ Score in JEE Main",
-      "Merit Scholarship Awardee"
+      "Graduated with 7.89 CGPA",
+      "Developed robust academic and practical engineering projects"
     ]
   }
 ];
 
 export default function Qualifications() {
-  const [expandedId, setExpandedId] = useState(1);
+  const [expandedIds, setExpandedIds] = useState([1]);
+
+  const toggleQualification = (id) => {
+    const isExpanding = !expandedIds.includes(id);
+
+    setExpandedIds((prev) =>
+      prev.includes(id) ? prev.filter((itemId) => itemId !== id) : [...prev, id]
+    );
+
+    if (isExpanding) {
+      setTimeout(() => {
+        const element = document.getElementById(`qualification-${id}`);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }, 100);
+    }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -99,49 +94,52 @@ export default function Qualifications() {
         </motion.h2>
 
         <div className="qualifications-accordion">
-          {qualifications.map((qualification, index) => (
-            <motion.div
-              key={qualification.id}
-              className="qualification-accordion-item"
-              variants={itemVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <motion.button
-                className="accordion-header"
-                onClick={() => setExpandedId(expandedId === qualification.id ? null : qualification.id)}
-                whileHover={{ boxShadow: "0 10px 30px rgba(56, 189, 248, 0.15)" }}
+          {qualifications.map((qualification, index) => {
+            const isExpanded = expandedIds.includes(qualification.id);
+            return (
+              <motion.div
+                key={qualification.id}
+                id={`qualification-${qualification.id}`}
+                className="qualification-accordion-item"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.1 }}
               >
-                <div className="header-content">
-                  <div className="header-icon">
-                    <FaGraduationCap size={24} />
+                <motion.button
+                  className="accordion-header"
+                  onClick={() => toggleQualification(qualification.id)}
+                  whileHover={{ boxShadow: "0 10px 30px rgba(56, 189, 248, 0.15)" }}
+                >
+                  <div className="header-content">
+                    <div className="header-icon">
+                      <FaGraduationCap size={24} />
+                    </div>
+                    <div className="header-text">
+                      <h4 className="qual-level">{qualification.level}</h4>
+                      <p className="qual-type">{qualification.type}</p>
+                      <p className="qual-institution-acc">{qualification.institution}</p>
+                    </div>
                   </div>
-                  <div className="header-text">
-                    <h4 className="qual-level">{qualification.level}</h4>
-                    <p className="qual-type">{qualification.type}</p>
-                    <p className="qual-institution-acc">{qualification.institution}</p>
-                  </div>
-                </div>
+                  <motion.div
+                    className="chevron-icon"
+                    animate={{ rotate: isExpanded ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FaChevronDown size={18} />
+                  </motion.div>
+                </motion.button>
+
                 <motion.div
-                  className="chevron-icon"
-                  animate={{ rotate: expandedId === qualification.id ? 180 : 0 }}
+                  className="accordion-content"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{
+                    opacity: isExpanded ? 1 : 0,
+                    height: isExpanded ? "auto" : 0,
+                  }}
                   transition={{ duration: 0.3 }}
                 >
-                  <FaChevronDown size={18} />
-                </motion.div>
-              </motion.button>
-
-              <motion.div
-                className="accordion-content"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{
-                  opacity: expandedId === qualification.id ? 1 : 0,
-                  height: expandedId === qualification.id ? "auto" : 0,
-                }}
-                transition={{ duration: 0.3 }}
-              >
                 <div className="content-inner">
                   {qualification.field && (
                     <p className="qual-field-acc">{qualification.field}</p>
@@ -212,7 +210,8 @@ export default function Qualifications() {
                 </div>
               </motion.div>
             </motion.div>
-          ))}
+          );
+        })}
         </div>
       </div>
     </section>

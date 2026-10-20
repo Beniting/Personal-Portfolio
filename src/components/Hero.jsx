@@ -1,5 +1,6 @@
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Hero() {
   const containerVariants = {
@@ -66,12 +67,55 @@ export default function Hero() {
               Crafting beautiful, responsive, and functional web applications with modern technologies
             </motion.p>
 
-            <motion.div variants={itemVariants} className="d-flex gap-3 flex-wrap">
+            <motion.div variants={itemVariants} className="d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start mb-4">
               <a href="/resume.pdf" download className="btn btn-outline-primary btn-lg">
                 Download Resume
               </a>
               <a href="#projects" className="btn btn-primary btn-lg">
                  View Projects
+              </a>
+            </motion.div>
+
+            {/* Social & Contact Icons */}
+            <motion.div
+              variants={itemVariants}
+              className="hero-social-links d-flex gap-3 align-items-center justify-content-center justify-content-lg-start"
+            >
+              <a
+                href="mailto:benitingraj@gmail.com"
+                className="hero-social-icon"
+                title="Email: benitingraj@gmail.com"
+                aria-label="Email"
+              >
+                <FaEnvelope size={18} />
+              </a>
+              <a
+                href="tel:+918870736865"
+                className="hero-social-icon"
+                title="Phone: +91 8870736865"
+                aria-label="Phone"
+              >
+                <FaPhone size={17} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/beniting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-icon"
+                title="LinkedIn Profile"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={19} />
+              </a>
+              <a
+                href="https://github.com/Beniting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-icon"
+                title="GitHub Profile"
+                aria-label="GitHub"
+              >
+                <FaGithub size={19} />
               </a>
             </motion.div>
 
