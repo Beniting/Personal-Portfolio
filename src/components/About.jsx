@@ -13,12 +13,12 @@ const skills = [
   { name: "MongoDB", icon: FaDatabase, color: "#00ed64" },
   { name: "Git", icon: FaGitAlt, color: "#f1502f" },
   { name: "GitHub", icon: FaGithub, color: "#ffffff" },
-  { name: "Docker", icon: FaDocker, color: "#2496ed" },
+  // { name: "Docker", icon: FaDocker, color: "#2496ed" },
   { name: "AWS", icon: FaAws, color: "#ff9900" },
-  { name: "Linux", icon: FaLinux, color: "#fcc624" },
+  // { name: "Linux", icon: FaLinux, color: "#fcc624" },
   { name: "CSS", icon: FaCss3Alt, color: "#1572b6" },
   { name: "HTML5", icon: FaHtml5, color: "#e34c26" },
-  { name: "DevOps", icon: FaCode, color: "#ff6b6b" },
+  // { name: "DevOps", icon: FaCode, color: "#ff6b6b" }, 
 ];
 
 export default function About() {
