@@ -89,7 +89,7 @@ export default function Hero() {
           >
             <div className="hero-image-container">
               <div className="hero-image-wrapper">
-                <img src="public\profile.jpg.jpeg" alt="Profile" className="hero-image" />
+                <img src="/profile.jpeg" alt="Profile" className="hero-image" />
                 <div className="hero-image-glow"></div>
               </div>
             </div>
